@@ -32,7 +32,7 @@ function getNewFiles()
 }
 
 
-newFiles=($(getFiles $pwd))
+newFiles=($(getFiles $pwd/src))
 
 getNewFiles "${newFiles[*]}"
 
