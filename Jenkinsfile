@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''tomcat_dir="/opt/tomcat-8083/webapps/doc/"
+        sh '''#!/usr/bin/env bash
+tomcat_dir="/opt/tomcat-8083/webapps/doc/"
 
 function getFiles()
 {
@@ -33,7 +34,7 @@ function getNewFiles()
 
 newFiles=($(getFiles $pwd))
 
-#getNewFiles "${newFiles[*]}"
+getNewFiles "${newFiles[*]}"
 
 #echo ${existFiles[*]}
 '''
