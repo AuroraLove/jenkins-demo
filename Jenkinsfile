@@ -3,12 +3,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''#!/usr/bin/env bash
-tomcat_dir="/opt/tomcat-8083/webapps/doc/"
+        sh '''tomcat_dir="/opt/tomcat-8083/webapps/doc/"
 
 function getFiles()
 {
-for file in `ls $1`
+for file in `ls`
 do
  echo $file
  arr=(${arr[*]} $file)
@@ -32,7 +31,7 @@ function getNewFiles()
 }
 
 
-newFiles=($(getFiles $pwd/src))
+newFiles=($(getFiles))
 
 getNewFiles "${newFiles[*]}"
 
