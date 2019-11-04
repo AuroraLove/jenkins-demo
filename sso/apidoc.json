@@ -1,5 +1,6 @@
 {
   "name": "sso",
+
   "version": "0.1.0",
   "description": "sso apiDoc",
   "title": "sso apiDoc  单点登陆管理系统 http://10.16.18.98:8002/gx-sso-server:http://10.16.28.7:8002 http://10.16.18.98:8001/gx-sso-client:http://10.16.28.7:8001"
